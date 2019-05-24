@@ -20,10 +20,8 @@ UserRouter
 UserRouter
   .route('/')
   .delete((req, res, next) => {
-    users.dequeue()
-      .then(user => {
-        return res.status(200).json({ users });
-      });
+    users.dequeue();
+    return res.status(200).json({ users });
   });
 
 UserRouter

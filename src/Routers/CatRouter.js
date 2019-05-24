@@ -12,9 +12,7 @@ CatRouter
   .route('/')
   .delete((req, res, next) => {
     cats.dequeue()
-      .then(cat => {
-        return res.status(200).json({ cats });
-      });
+    return res.status(200).json({ cats });
   });
 
 module.exports = CatRouter;

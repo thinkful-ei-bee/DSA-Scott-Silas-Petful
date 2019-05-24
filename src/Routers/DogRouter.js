@@ -11,10 +11,8 @@ DogRouter
 DogRouter
   .route('/')
   .delete((req, res) => {
-    dogs.dequeue()
-      .then(dog => {
-        return res.status(200).json({ dogs });
-      });
+    dogs.dequeue();
+    return res.status(200).json({ dogs });
   });
-  
+
 module.exports = DogRouter;
