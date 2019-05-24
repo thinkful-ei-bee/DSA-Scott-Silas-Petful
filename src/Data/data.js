@@ -69,5 +69,6 @@ dogs.enqueue({
 
 //console.log(cats);
 //console.log(dogs);
+console.log('USERS QUEUE: ', users);
 
 module.exports = { cats, dogs, users };

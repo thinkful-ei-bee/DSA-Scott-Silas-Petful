@@ -12,10 +12,9 @@ UserRouter
       return res.status(400).json({ error: 'No username is request params' });
     }
 
-    users.enqueue({ username })
-      .then(() => {
-        return res.status(201).json({ users });
-      });
+    users.enqueue({ username });
+    console.log('USERROUTER USERS: ', users);
+    return res.status(201).json({ users });
   });
 
 UserRouter
