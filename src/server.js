@@ -3,6 +3,7 @@ const cors = require('cors');
 const CatRouter = require('./Routers/CatRouter');
 const DogRouter = require('./Routers/DogRouter');
 const UserRouter = require('./Routers/UserRouter');
+const { PORT } = require('./config');
 
 const app = express();
 app.use(cors());
@@ -32,8 +33,8 @@ app.use('/api/cats', CatRouter);
 app.use('/api/dogs', DogRouter);
 app.use('/api/users', UserRouter);
 
-app.listen(8080,()=>{
-  console.log('Serving on 8080');
+app.listen(PORT,()=>{
+  console.log(`${PORT}`);
 });
 
 module.exports = app;
