@@ -2,6 +2,7 @@ const queue = require('./queue');
 
 const cats = new queue();
 const dogs = new queue();
+const users = new queue();
 
 // Cats
 cats.enqueue(
@@ -69,4 +70,4 @@ dogs.enqueue({
 //console.log(cats);
 //console.log(dogs);
 
-module.exports = { cats, dogs };
+module.exports = { cats, dogs, users };

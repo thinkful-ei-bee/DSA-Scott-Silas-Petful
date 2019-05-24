@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-const CatRouter = require('./Pets/CatRouter');
-const DogRouter = require('./Pets/DogRouter');
+const CatRouter = require('./Routers/CatRouter');
+const DogRouter = require('./Routers/DogRouter');
+const UserRouter = require('./Routers/UserRouter');
 
 const app = express();
 app.use(cors());
@@ -29,6 +30,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/cats', CatRouter);
 app.use('/api/dogs', DogRouter);
+app.use('/api/users', UserRouter);
 
 app.listen(8080,()=>{
   console.log('Serving on 8080');
