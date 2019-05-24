@@ -26,4 +26,10 @@ UserRouter
       });
   });
 
+UserRouter
+  .route('/')
+  .get((req, res) => {
+    return res.status(200).json({ users });
+  });
+
 module.exports = UserRouter;

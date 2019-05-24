@@ -67,6 +67,9 @@ dogs.enqueue({
   story: 'Stranded at the beach.'
 });
 
+users.enqueue({ username: 'First_User' });
+users.enqueue({ username: 'Second_User' });
+
 //console.log(cats);
 //console.log(dogs);
 console.log('USERS QUEUE: ', users);
