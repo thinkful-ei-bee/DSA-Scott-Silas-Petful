@@ -8,4 +8,13 @@ DogRouter
     res.status(200).json({ dogs });
   });
 
+DogRouter
+  .route('/')
+  .delete((req, res) => {
+    dogs.dequeue()
+      .then(dog => {
+        return res.status(200).json({ dogs });
+      });
+  });
+  
 module.exports = DogRouter;

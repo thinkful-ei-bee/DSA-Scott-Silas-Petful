@@ -69,6 +69,7 @@ dogs.enqueue({
 
 users.enqueue({ username: 'First_User' });
 users.enqueue({ username: 'Second_User' });
+users.enqueue({ username: 'Main_User' });
 
 //console.log(cats);
 //console.log(dogs);
