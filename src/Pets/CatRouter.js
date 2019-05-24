@@ -1,4 +1,3 @@
-const app = require('../server');
 const express = require('express');
 const CatRouter = express.Router();
 const { cats } = require('../Data/data');
